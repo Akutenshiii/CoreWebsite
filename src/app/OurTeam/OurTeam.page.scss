@@ -1,0 +1,40 @@
+ion-row {
+    justify-content: center;
+    align-Content:center;
+
+    &.Heading{
+        color: #1C76A4;
+        font-weight: bold;
+        font-size: 42px;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+
+    &.SubTitle {
+        color: #1C76A4;
+        font-size: 16px;
+    }
+}
+
+ion-col {
+    &.SubHeading {
+        color: #1C76A4;
+        font-size: 25px;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+        margin-left: 3vw;
+        margin-right: 3vw;
+        font-size: 22px;
+
+        padding: 3vw;
+    }
+}
+
+ion-icon {
+    font-weight: bold;
+    font-size: 250px;
+    padding: 20px;
+    color: #4b535d;
+}

@@ -1,0 +1,135 @@
+ion-row {
+    &.Heading{
+        justify-content: center;
+        align-Content: center;
+
+        color: #1C76A4;
+        font-weight: bold;
+        font-size: 42px;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+
+    &.SubHeading{
+        justify-content: center;
+        align-Content: center;
+        
+        color: #1C76A4;
+        font-size: 25px;
+        margin-bottom: 3vh;
+        margin-left: 20vw;
+        margin-right: 20vw;
+
+        @media (max-width: 1024px) {
+            margin-left: 4vw;
+            margin-right: 4vw;
+        }
+    }
+
+    &.CardHeadingGrey {
+        justify-content: center;
+        align-Content: center;
+
+        color: #ffffff;
+        background-color: #4b535d;
+        font-weight: bold;
+        font-size: 42px;
+        margin-left: 20vw;
+        margin-right: 20vw;
+        padding-top: 1vw;
+        
+        @media (max-width: 1024px) {
+            margin-left: 4vw;
+            margin-right: 4vw;
+        }
+    }
+
+    &.CardHeadingBlue {
+        justify-content: center;
+        align-Content: center;
+    
+        color: #ffffff;
+        background-color: #1C76A4;
+        font-weight: bold;
+        font-size: 42px;
+        margin-left: 20vw;
+        margin-right: 20vw;
+        padding-top: 1vw;
+        
+        @media (max-width: 1024px) {
+            margin-left: 4vw;
+            margin-right: 4vw;
+        }
+    }
+
+    &.CardBodyGrey {
+        color: #ffffff;
+        background-color: #4b535d;
+        font-size: 17px;
+
+        margin-left: 20vw;
+        margin-right: 20vw;
+        justify-content: start;
+
+        padding: 3vh;
+        
+        @media (max-width: 1024px) {
+            margin-left: 4vw;
+            margin-right: 4vw;
+        }
+    }
+
+    &.CardBodyBlue {
+        color: #ffffff;
+        background-color: #1C76A4;
+        font-size: 17px;
+        margin-left: 20vw;
+        margin-right: 20vw;
+        justify-content: start;
+
+        padding: 3vh;
+        
+        @media (max-width: 1024px) {
+            margin-left: 4vw;
+            margin-right: 4vw;
+        }
+    }
+
+    &.paddingTop {
+        padding-top: 1vh;
+    }
+
+    &.fullWidth {
+        width: 100%;
+    }
+}
+
+ion-col {
+    &.Card {
+        background-color: #4b535d;
+        color: #ffffff;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+        margin-left: 3vw;
+        margin-right: 3vw;
+        font-size: 22px;
+
+        padding: 3vw;
+    }
+}
+
+ion-col ul {
+    &.Box {
+        border: 1px solid #ccc; /* Add a solid border */
+        padding: -10px; /* Add padding to create space between the content and the border */
+        width: 50%;
+    }
+}
+
+ion-icon {
+    font-weight: bold;
+    font-size: 60px;
+    padding: 20px;
+}

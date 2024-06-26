@@ -1,0 +1,74 @@
+ion-content {
+  --background: no-repeat center center fixed;
+  background: url(../../assets/background.webp);
+  background-size: cover;
+  background-position: center;
+}
+
+swiper-container {
+    width: 50vw;
+    height: 50vh;
+    background-color: rgba(28, 118, 164, 0.8);
+
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+
+    @media (max-width: 1024px) {
+        width: 75vw; /* Adjust as needed */
+    }
+
+    @media (max-width: 768px) {
+        width: 90vw; /* Adjust as needed */
+    }
+}
+
+swiper-container {
+    --swiper-pagination-bullet-inactive-color: #dddddd;
+    --swiper-pagination-bullet-inactive-opacity: 0.8;
+    --swiper-pagination-color: #ffffff;
+    --swiper-navigation-color: #ffffff;
+    --swiper-navigation-size: 15px;
+}
+
+.swiper-button-prev {
+    color: #ffffff; 
+}
+
+.swiper-button-next {
+    color: #ffffff !important; 
+}
+
+swiper-slide {
+    align-content: center;
+    color: white;
+    
+    padding: 3vw;
+}
+
+ion-col{
+    &.Heading{
+        color: white;
+        font-weight: bold;
+        font-size: 36px;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    &.Description {
+        flex-direction: column;
+        font-size: 18px; 
+    }
+}
+
+ion-row {
+    &.Button {
+        justify-content: center;
+    }
+}
+
+ion-button {
+    padding-top: 3vh;
+    --background: #4b535d;
+}

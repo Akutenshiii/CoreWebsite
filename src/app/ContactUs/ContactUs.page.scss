@@ -1,0 +1,53 @@
+capacitor-google-map {
+    display: inline-block;
+    width: 275px;
+    height: 400px;
+}
+
+ion-row {
+  &.Heading{
+    justify-content: center;
+    align-Content:center;
+
+      color: #1C76A4;
+      font-weight: bold;
+      font-size: 42px;
+      margin-top: 3vh;
+      margin-bottom: 3vh;
+      margin-left: 3vw;
+      margin-right: 3vw;
+  }
+
+  &.fullWidtth{
+    width: 100%;
+  }
+}
+
+ion-col {
+  .GoogleMaps {
+    display: flex;
+    justify-content: flex-end; /* Align the map container to the right */
+  }
+  
+  .CoreConsultMap {
+    margin-left: 28vw; 
+  }
+
+  &.Card {
+    display: flex;
+    align-items: center; /* Center items vertically */
+  }
+}
+
+ion-icon {
+  color: #1C76A4;
+  font-weight: bold;
+  font-size: 60px;
+  padding: 20px;
+}
+
+@media (max-width: 1199px) {
+  ion-icon {
+    margin-left: 15vw;
+  }
+}

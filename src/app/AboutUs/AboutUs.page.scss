@@ -1,0 +1,42 @@
+ion-row {
+    justify-content: center;
+    align-Content:center;
+
+    &.Heading{
+        color: #1C76A4;
+        font-weight: bold;
+        font-size: 42px;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+
+    &.SubHeading{
+        color: #1C76A4;
+        font-size: 25px;
+        margin-bottom: 3vh;
+        margin-left: 6vw;
+        margin-right: 6vw;
+    }
+}
+
+ion-col {
+    &.Card {
+        background-color: #4b535d;
+        color: #ffffff;
+        margin-top: 1vh;
+        margin-bottom: 3vh;
+        margin-left: 3vw;
+        margin-right: 3vw;
+        font-size: 22px;
+
+        padding: 3vw;
+    }
+}
+
+ion-icon {
+    font-weight: bold;
+    font-size: 60px;
+    padding: 20px;
+}

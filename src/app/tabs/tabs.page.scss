@@ -1,1 +1,22 @@
+ion-header {
+    display: block !important;
+    justify-content: center;
+    background-color: white;
+}
 
+ion-row {
+    justify-content: center;
+}
+
+ion-footer {
+    display: block !important;
+    justify-content: center;
+    background-color: #1C76A4;
+    height: 4vh;
+}
+
+ion-img {
+    &.CoreFooter {
+        max-width: 220px !important;
+    }
+}
