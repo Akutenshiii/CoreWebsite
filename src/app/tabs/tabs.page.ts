@@ -6,7 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['tabs.page.scss']
 })
 export class TabsPage {
+  spin = false;
 
-  constructor() {}
-
+  constructor() {
+    setTimeout(() => {
+      this.spin = true;
+      setTimeout(() => {
+        this.spin = false; // Remove the class after the animation completes if desired
+      }, 1000); // Duration of the animation in milliseconds
+    }, 0);
+  }
 }

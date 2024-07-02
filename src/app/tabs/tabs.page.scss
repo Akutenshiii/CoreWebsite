@@ -20,3 +20,17 @@ ion-img {
         max-width: 220px !important;
     }
 }
+
+/* Add this to your global stylesheet or the component's stylesheet */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+  
+.spin-animation {
+    animation: spin 1s ease-in-out;
+}
