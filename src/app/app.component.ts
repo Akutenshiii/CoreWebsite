@@ -1,5 +1,6 @@
 import { register } from 'swiper/element/bundle';
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { GoogleMapsService } from './google-maps.service';
 
 register();
 @Component({
@@ -8,5 +9,12 @@ register();
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  @ViewChild('MainMap') 
+  set MainMap(ref: ElementRef<HTMLElement>) {
+    if (ref) {
+      this.googleMapsService.createMap(ref.nativeElement);
+    }
+  }
+
+  constructor(private googleMapsService: GoogleMapsService) {}
 }
