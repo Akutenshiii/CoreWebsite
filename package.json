@@ -30,6 +30,7 @@
     "@capacitor/haptics": "next",
     "@capacitor/keyboard": "next",
     "@capacitor/status-bar": "next",
+    "@emailjs/browser": "^4.4.1",
     "@ionic/angular": "^7.0.0",
     "ionicons": "^7.0.0",
     "rxjs": "~7.8.0",

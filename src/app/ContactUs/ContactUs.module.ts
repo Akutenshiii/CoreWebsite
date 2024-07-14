@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ContactUsPage } from './ContactUs.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { ContactUsPageRoutingModule } from './ContactUs-routing.module';
 
 @NgModule({
@@ -13,6 +13,7 @@ import { ContactUsPageRoutingModule } from './ContactUs-routing.module';
     IonicModule,
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     ExploreContainerComponentModule,
     ContactUsPageRoutingModule
   ],

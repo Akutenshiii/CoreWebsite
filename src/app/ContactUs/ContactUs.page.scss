@@ -8,7 +8,6 @@ ion-row {
   &.Heading{
     justify-content: center;
     align-Content:center;
-
       color: #1C76A4;
       font-weight: bold;
       font-size: 42px;
@@ -23,20 +22,56 @@ ion-row {
   }
 }
 
-ion-col {
-  .GoogleMaps {
-    display: flex;
-    justify-content: flex-end; /* Align the map container to the right */
-  }
-  
-  .CoreConsultMap {
-    margin-left: 28vw; 
-  }
+ion-input,ion-label,ion-col,ion-item,ion-textarea{
+  color: #333 !important; 
+  background-color: white;
+}
 
-  &.Card {
-    display: flex;
-    align-items: center; /* Center items vertically */
-  }
+ion-card-header{
+  border-bottom: solid 1px whitesmoke;
+}
+
+ion-card-title{
+  color: #1C76A4;
+}
+
+ion-item {
+  --background: white; 
+  width: 300px;
+  color: #1C76A4;
+  align-items: end;
+}
+
+ion-button {
+  --background: #1C76A4;
+}
+
+ion-card{
+  background-color:white;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  height: fit-content;
+  color: white;
+}
+
+ion-col {
+  display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+ion-label{
+  margin-left: 40px;
+  border: none;
+}
+
+.email-from ion-label{
+  color: #1C76A4 !important;
+}
+
+ion-item{
+  border-bottom: none;
+  min-height: fit-content;
 }
 
 ion-icon {
@@ -44,10 +79,12 @@ ion-icon {
   font-weight: bold;
   font-size: 60px;
   padding: 20px;
+  margin-right: 40px;
+  margin-top: 4px;
 }
 
-@media (max-width: 1199px) {
-  ion-icon {
-    margin-left: 15vw;
-  }
+ion-list{
+  --ion-item-background:  transparent;
 }
+
+@media (max-width: 1199px) { }

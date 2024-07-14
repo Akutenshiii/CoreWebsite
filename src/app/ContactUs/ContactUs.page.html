@@ -2,39 +2,79 @@
   <ion-grid>
     <ion-row class="Heading">Contact Us</ion-row>
     <ion-row>
-      <ion-col class="GoogleMaps" sizeXl="6" sizeLg="12" sizeMd="12" sizeXs="12">
-        <capacitor-google-map #CoreConsultMap class="CoreConsultMap"></capacitor-google-map>
+      <ion-col sizeXl="1" sizeLg="12" sizeMd="12" sizeXs="12">
       </ion-col>
-      <ion-col sizeXl="6" sizeLg="12" sizeMd="12" sizeXs="12">
-        <ion-row>
-          <ion-col sizeXl="2" sizeLg="5" sizeMd="5" sizeXs="5">
+      <ion-col class="GoogleMaps ion-text-center top-aligned" sizeXl="3" sizeLg="12" sizeMd="12" sizeXs="12">
+      <ion-card>
+        <capacitor-google-map #CoreConsultMap class="CoreConsultMap"></capacitor-google-map>
+      </ion-card>
+      </ion-col>
+      <ion-col class="ion-text-center top-aligned" sizeXl="4" sizeLg="12" sizeMd="12" sizeXs="12">
+        <ion-card>
+          <ion-list lines="none">
+          <ion-item>
+            <ion-thumbnail  slot="start" style="align-self: flex-start;">
             <ion-icon name="location-sharp"></ion-icon>
-          </ion-col>
-          <ion-col class="Card" sizeXl="10" sizeLg="7" sizeMd="7" sizeXs="7">
-            5th Floor<br>
+            </ion-thumbnail>
+            <ion-label>
+              5th Floor<br>
             Bloukrans Building<br>
             Lynnwood Bridge Office Park<br>
             Hilden Rd<br>
             Lynnwood Manor<br>
             Pretoria<br>
             0081
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col sizeXl="2" sizeLg="5" sizeMd="5" sizeXs="5">
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-thumbnail class="thumbnail" slot="start" style="align-self: flex-start;" >
             <ion-icon name="mail-unread-sharp"></ion-icon>
-          </ion-col>
-          <ion-col class="Card" sizeXl="10" sizeLg="7" sizeMd="7" sizeXs="7">gerrit&#64;core.net.za</ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col sizeXl="2" sizeLg="5" sizeMd="5" sizeXs="5">
+            </ion-thumbnail>
+            <ion-label>
+              <br> <br>
+              gerrit&#64;core.net.za
+              <br><br> <br>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-thumbnail class="thumbnail" slot="start" style="align-self: flex-start;">
             <ion-icon name="call-sharp"></ion-icon>
-          </ion-col>
-          <ion-col class="Card" sizeXl="10" sizeLg="7" sizeMd="7" sizeXs="7">
-            012 007 2527<br>
-            083 269 0866
-          </ion-col>
-        </ion-row>
+            </ion-thumbnail>
+            <ion-label>
+              <br><br>
+              012 007 2527<br>
+              083 269 0866
+              <br>
+              <br>
+              <br>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+        </ion-card>
+      </ion-col>
+      <ion-col sizeXl="3" sizeLg="12" sizeMd="12" sizeXs="12" class="ion-text-center top-aligned" >
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Get In Touch</ion-card-title>
+        </ion-card-header>
+        <form [formGroup]="contactForm" class="email-from" (ngSubmit)="sendEmail()" style="display: flex; flex-direction: column; align-items: center;">
+          <ion-item>
+            <ion-label position="floating">Name</ion-label>
+            <ion-input formControlName="name" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input formControlName="email" type="email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Message</ion-label>
+            <ion-textarea formControlName="message"></ion-textarea>
+          </ion-item>
+          <ion-button type="submit" [disabled]="!contactForm.valid">Send</ion-button>
+        </form>
+      </ion-card>
+      </ion-col>
+      <ion-col sizeXl="1" sizeLg="12" sizeMd="12" sizeXs="12">
       </ion-col>
     </ion-row>
   </ion-grid>

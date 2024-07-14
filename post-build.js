@@ -9,6 +9,12 @@ const htaccessContent = `
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^ index.html [QSA,L]
 </IfModule>
+
+<IfModule mod_headers.c>
+  Header set Access-Control-Allow-Origin "*"
+  Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+  Header set Access-Control-Allow-Headers "Origin, Content-Type, Accept"
+</IfModule>
 `;
 
 // Define the path to the .htaccess file in the www directory

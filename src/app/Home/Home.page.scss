@@ -4,24 +4,70 @@ ion-content {
   background-size: cover;
   background-position: center;
 }
+ion-item{
+    color:white;
+}
 
 swiper-container {
     width: 50vw;
     height: 50vh;
     background-color: rgba(28, 118, 164, 0.8);
-
     margin-top: 5vh;
     margin-bottom: 5vh;
-
     @media (max-width: 1024px) {
         width: 75vw; /* Adjust as needed */
     }
-
     @media (max-width: 768px) {
         width: 90vw; /* Adjust as needed */
     }
 }
+.news-text{
+    color: white;
+    font-size :15px;
+}
 
+.news-date-text{
+    color:whitesmoke;
+    font-size: smaller;
+}
+.news-header-text{
+    color:white;
+    font-size: 16px; 
+    font-weight: bold;
+}
+
+ion-list {
+    overflow: hidden;
+    overflow-y: auto;
+    --ion-item-background:  transparent;
+    color: rgba(28, 118, 164, 0.8) ;
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+ion-card {
+    max-height: 50vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(28, 118, 164, 0.8);
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    @media (max-width: 1024px) {
+        width: 75vw; 
+    }
+    @media (max-width: 768px) {
+        width: 90vw; 
+    }
+  }
+
+  ion-item,ion-thumbnail,ion-label{
+    background-color:transparent;
+    border: none;
+   
+  }
+ 
 swiper-container {
     --swiper-pagination-bullet-inactive-color: #dddddd;
     --swiper-pagination-bullet-inactive-opacity: 0.8;
@@ -44,6 +90,20 @@ swiper-slide {
     
     padding: 3vw;
 }
+.thumbnail{
+    margin-top: 13px;
+    width: fit-content;
+}
+ion-icon {
+    color: white;
+    font-weight: bold;
+    font-size: 34px;
+   
+  }
+
+  ion-card-title{
+    color: white;
+  }
 
 ion-col{
     &.Heading{
