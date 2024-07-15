@@ -3,12 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { NewsItem } from './news-item.model';
+import { environment } from 'environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class RssFeedService {
-  private rssFeedUrl: string = 'https://www.dotnews.co.za/Code/RSS/1714';
+  private rssFeedUrl: string = environment.rssFeedSource;
 
   constructor(private http: HttpClient) {}
 
