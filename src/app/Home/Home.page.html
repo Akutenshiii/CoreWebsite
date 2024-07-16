@@ -1,6 +1,4 @@
-<ion-content >
-  <ion-row>
-  <ion-col sizeXl="8" sizeLg="12" sizeMd="12" sizeXs="12">
+<ion-content>
   <swiper-container [loop]="true" [autoplay]="true" [pagination]="{clickable:true, dynamicBullets:true}" [navigation]="true">
     <swiper-slide>
       <ion-grid>
@@ -55,30 +53,6 @@
       </ion-grid>
     </swiper-slide>
   </swiper-container>
-  </ion-col>
-  <ion-col sizeXl="4" sizeLg="12" sizeMd="12" sizeXs="12">
-   <ion-card>
-    <ion-card-header>
-      <ion-card-title>Latest News</ion-card-title>
-    </ion-card-header>
-      <ion-list lines="none">
-        <div *ngFor="let newsItem of news">
-          <ion-item>
-            <ion-thumbnail class="thumbnail" slot="start" style="align-self: flex-start;">
-            <ion-icon name="newspaper-outline"></ion-icon>
-            </ion-thumbnail>
-            <ion-label>
-            <p class="news-header-text">{{ newsItem.title }}</p>
-            <br>
-            <p class="news-text">{{ newsItem.description }}</p>
-            <a [href]="newsItem.link" target="_blank">Read more</a>
-            </ion-label>
-          </ion-item>
-      </div>
-      </ion-list>
-  </ion-card>
-  </ion-col>
-</ion-row>
 </ion-content>
 
 <head>

@@ -67,6 +67,7 @@ ion-label{
 
 .email-from ion-label{
   color: #333 !important;
+  height: 55px;
 }
 
 ion-item{
@@ -85,6 +86,11 @@ ion-icon {
 
 ion-list{
   --ion-item-background:  transparent;
+}
+
+ion-button {
+  padding-top: 3vh;
+  --background: #4b535d;
 }
 
 @media (max-width: 1199px) { }

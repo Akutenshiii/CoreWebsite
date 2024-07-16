@@ -1,0 +1,29 @@
+<ion-content>
+  <swiper-container [loop]="true" [autoplay]="true" [pagination]="{clickable:true, dynamicBullets:true}" [navigation]="true">
+    <swiper-slide *ngFor="let newsItem of news">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="Heading" sizeXl="6" sizeLg="12" sizeMd="12" sizeXs="12">
+            {{ newsItem.title }}
+          </ion-col>
+          <ion-col class="Description" sizeXl="6" sizeLg="12" sizeMd="12" sizeXs="12">
+            <ion-row>
+              <ion-thumbnail class="thumbnail" slot="start" style="align-self: flex-start;">
+                <ion-icon name="newspaper-outline"></ion-icon>
+              </ion-thumbnail>
+              <ion-label>
+                <ion-row class="news-text">{{ newsItem.description }}</ion-row>
+                <ion-row  class="Button"><ion-button [href]="newsItem.link" target="_blank">Read more</ion-button></ion-row>
+              </ion-label>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </swiper-slide>
+  </swiper-container>
+</ion-content>
+
+<head>
+  <title>LatestNews Page</title>
+  <meta name="description" content="Core Consultants Inc. was founded on core ethics, integrity, innovation and accountability; by following these principles, our experienced team strives to deliver top-tier services.">
+</head>
