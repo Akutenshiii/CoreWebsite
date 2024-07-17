@@ -4,15 +4,21 @@ capacitor-google-map {
     height: 400px;
 }
 
+ion-content {
+  --background: no-repeat center center fixed;
+  background: url(../../assets/background.webp);
+  background-size: cover;
+  background-position: center;
+}
 ion-row {
   &.Heading{
     justify-content: center;
     align-Content:center;
-      color: #1C76A4;
+      color: white;
       font-weight: bold;
       font-size: 42px;
       margin-top: 3vh;
-      margin-bottom: 3vh;
+      margin-bottom: -2vh;
       margin-left: 3vw;
       margin-right: 3vw;
   }
@@ -58,6 +64,11 @@ ion-col {
   display: flex;
     justify-content: center;
     align-content: center;
+    background-color: transparent;
+}
+
+.transparent-background{
+  background-color: rgba(28, 118, 164, 0.8);
 }
 
 ion-label{
@@ -85,7 +96,7 @@ ion-icon {
 }
 
 ion-list{
-  --ion-item-background:  transparent;
+  --ion-item-background: transparent;
 }
 
 ion-button {
