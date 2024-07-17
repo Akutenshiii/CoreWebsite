@@ -1,9 +1,6 @@
 <ion-content [fullscreen]="true">
   <ion-grid>
     <ion-row class="transparent-background">
-      <ion-col sizeXl="12" sizeLg="12" sizeMd="12" sizeXs="12">
-        <ion-row class="Heading">Contact Us</ion-row>
-      </ion-col>
       <ion-col sizeXl="1" sizeLg="12" sizeMd="12" sizeXs="12">
       </ion-col >
       <ion-col class="GoogleMaps ion-text-center top-aligned" sizeXl="3" sizeLg="12" sizeMd="12" sizeXs="12">
@@ -55,20 +52,20 @@
         </ion-card>
       </ion-col>
       <ion-col sizeXl="3" sizeLg="12" sizeMd="12" sizeXs="12" class="ion-text-center top-aligned" >
-      <ion-card>
+      <ion-card class="extendbigger1420">
         <ion-card-header>
           <ion-card-title>Get In Touch</ion-card-title>
         </ion-card-header>
         <form [formGroup]="contactForm" class="email-from" (ngSubmit)="sendEmail()" style="display: flex; flex-direction: column; align-items: center;">
-          <ion-item>
+          <ion-item class="extend1420">
             <ion-label position="floating">Name</ion-label>
             <ion-input formControlName="name" type="text"></ion-input>
           </ion-item>
-          <ion-item>
+          <ion-item class="extend1420">
             <ion-label position="floating">Email</ion-label>
             <ion-input formControlName="email" type="email"></ion-input>
           </ion-item>
-          <ion-item>
+          <ion-item class="extend1420">
             <ion-label position="floating">Message</ion-label>
             <ion-textarea formControlName="message"></ion-textarea>
           </ion-item>
