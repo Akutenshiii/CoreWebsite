@@ -15,7 +15,7 @@ export class RssFeedService {
 
   fetchNews(): Observable<NewsItem[]> {
     // Uncomment this block to use mock data
-    const mockResponse = `
+  /* const mockResponse = `
        <rss version="2.0">
          <channel>
            <title>Core Consultants Inc - CA(SA)DotNews</title>
@@ -43,11 +43,11 @@ export class RssFeedService {
      return of(mockResponse).pipe(
        map((response) => this.parseRSS(response))
      );
-
+*/
     // Comment out the block above and uncomment this block to use HTTP request
-  /* return this.http.get(this.rssFeedUrl, { responseType: 'text' }).pipe(
+   return this.http.get(this.rssFeedUrl, { responseType: 'text' }).pipe(
       map((response) => this.parseRSS(response))
-    );*/
+    );
   }
 
   private parseRSS(response: string): NewsItem[] {
