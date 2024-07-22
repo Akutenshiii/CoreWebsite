@@ -9,7 +9,8 @@ export const environment = {
       templateID: 'template_s1jn7ik',
       userID: 'QI5-a2ctJZvi4QD34'
     },
-  rssFeedSource:'https://www.dotnews.co.za/Code/RSS/1714'
+  rssFeedSource:'https://www.dotnews.co.za/Code/RSS/1714',
+  corsProxy:'https://corsproxy.io/?'
   };
   
 
