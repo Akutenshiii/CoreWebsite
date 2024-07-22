@@ -20,15 +20,14 @@ export class RssFeedService {
   }
 
   private parseRSS(response: string): NewsItem[] {
-    const newsItems: NewsItem[] = [];  
-    console.log('Original Response:', response);
-  
+    const newsItems: NewsItem[] = [];
     // Remove any injected scripts or unwanted content using regex
-    const cleanResponse = response.replace(/<script[\s\S]*?<\/script>/gi, '');    
-    console.log('Cleaned Response:', cleanResponse); 
-    const parser = new DOMParser();
+    // const cleanResponse = response.replace(/<script[\s\S]*?<\/script>/gi, '');  
 
-    try {
+    const cleanResponse = '<channel>' + response.split('<channel>')[1].split('</channel>')[0] + '</channel>'; // Quick and dirty fix
+    const parser = new DOMParser();
+ 
+    try { 
     const xml = parser.parseFromString(cleanResponse, 'text/xml');
     const items = xml.querySelectorAll('item');
 
