@@ -21,9 +21,18 @@ export class RssFeedService {
 
   private parseRSS(response: string): NewsItem[] {
     const newsItems: NewsItem[] = [];
+    const cleanResponse = response.split('</rss>')[0] + '</rss>'; // Quick and dirty fix
     const parser = new DOMParser();
-    const xml = parser.parseFromString(response, 'text/xml');
+
+    try{
+    const xml = parser.parseFromString(cleanResponse, 'text/xml');
     const items = xml.querySelectorAll('item');
+
+    const parseError = xml.querySelector('parsererror');
+    if (parseError) {
+      console.error('Error parsing XML:', parseError.textContent);
+      throw new Error(`Error parsing XML: ${parseError.textContent}`);
+    }
 
     items.forEach((item) => {
       const title = item.querySelector('title')?.textContent || '';
@@ -38,6 +47,9 @@ export class RssFeedService {
         description,
       });
     });
+  } catch (error) {
+    console.error('Error parsing RSS feed:', error)
+  }
 
     return newsItems;
   }
