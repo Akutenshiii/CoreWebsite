@@ -1,42 +1,62 @@
+// Define reusable variables for spacing and colors
+$spacing-small: 1vh;
+$spacing-medium: 3vh;
+$spacing-large: 3vw;
+$primary-color: #1C76A4;
+$secondary-color: #4b535d;
+$text-color-light: #ffffff;
+
+// Reusable typography scaling
+$font-size-heading: 2.625rem;  // 42px
+$font-size-subheading: 1.5625rem;  // 25px
+$font-size-card: 1.375rem;  // 22px
+$font-size-icon: 3.75rem;  // 60px
+$padding-icon: 1.25rem;  // 20px
+
 ion-row {
-    justify-content: center;
-    align-Content:center;
+  justify-content: center;
+  align-content: center;
 
-    &.Heading{
-        color: #1C76A4;
-        font-weight: bold;
-        font-size: 42px;
-        margin-top: 3vh;
-        margin-bottom: 3vh;
-        margin-left: 3vw;
-        margin-right: 3vw;
-    }
+  &.Heading {
+    color: $primary-color;
+    font-weight: bold;
+    font-size: $font-size-heading;
+    margin: $spacing-medium $spacing-large;
+  }
 
-    &.SubHeading{
-        color: #1C76A4;
-        font-size: 25px;
-        margin-bottom: 3vh;
-        margin-left: 6vw;
-        margin-right: 6vw;
-    }
+  &.SubHeading {
+    color: $primary-color;
+    font-size: $font-size-subheading;
+    margin: $spacing-medium 6vw $spacing-small;
+  }
 }
 
 ion-col {
-    &.Card {
-        background-color: #4b535d;
-        color: #ffffff;
-        margin-top: 1vh;
-        margin-bottom: 3vh;
-        margin-left: 3vw;
-        margin-right: 3vw;
-        font-size: 22px;
+  &.Card {
+    background-color: $secondary-color;
+    color: $text-color-light;
+    font-size: $font-size-card;
+    margin: $spacing-small $spacing-large;
+    padding: $spacing-large;
 
-        padding: 3vw;
+    display: flex; // Ensure consistent content alignment
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 1024px) {
+      margin: $spacing-small 2vw;
+      padding: 2vw;
     }
+  }
 }
 
 ion-icon {
-    font-weight: bold;
-    font-size: 60px;
-    padding: 20px;
+  font-weight: bold;
+  font-size: $font-size-icon;
+  padding: $padding-icon;
+
+  &:hover {
+    color: lighten($secondary-color, 10%);
+    cursor: pointer;
+  }
 }

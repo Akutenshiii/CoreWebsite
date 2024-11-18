@@ -118,6 +118,19 @@ ion-item{
   min-height: fit-content;
 }
 
+ion-item.facebook-link {
+  --inner-padding: 8px;
+  margin-bottom: 10px;
+}
+
+ion-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+ion-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 ion-icon {
   color: #1C76A4;
   font-weight: bold;
@@ -137,3 +150,14 @@ ion-button {
 }
 
 @media (max-width: 1199px) { }
+
+@media (max-width: 768px) {
+  ion-row.Heading {
+      font-size: 32px;
+  }
+}
+
+ion-button:hover {
+  --background: #333; /* Darker shade for hover */
+  transform: scale(1.05); /* Slight enlargement */
+}
